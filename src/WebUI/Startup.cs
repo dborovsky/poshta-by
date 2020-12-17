@@ -39,10 +39,12 @@ namespace PoshtaBy.WebUI
             services.AddHealthChecks()
                 .AddDbContextCheck<ApplicationDbContext>();
 
+            services.AddMvc();
+
             services.AddControllersWithViews(options => 
                 options.Filters.Add(new ApiExceptionFilter()));
 
-            services.AddRazorPages();
+            //services.AddRazorPages();
 
             // Customise default API behaviour
             services.Configure<ApiBehaviorOptions>(options =>
@@ -109,10 +111,11 @@ namespace PoshtaBy.WebUI
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller}/{action=Index}/{id?}");
-                endpoints.MapRazorPages();
+                    pattern: "{controller=Home}/{action=Index}/{id?}");
+                //endpoints.MapRazorPages();
             });
 
+            /*
             app.UseSpa(spa =>
             {
                 // To learn more about options for serving an Angular SPA from ASP.NET Core,
@@ -125,6 +128,7 @@ namespace PoshtaBy.WebUI
                     spa.UseAngularCliServer(npmScript: "start");
                 }
             });
+            */
         }
     }
 }

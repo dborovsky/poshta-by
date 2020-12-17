@@ -13,6 +13,25 @@ export const MENU_ITEMS: NbMenuItem[] = [
     link: '/pages/iot-dashboard',
   },
   {
+    title: "Экспорт/импорт",
+    icon: "briefcase-outline",
+    link: '/pages/convert',
+  },
+  {
+    title: 'МЕНЮ',
+    group: true,
+  },
+  {
+    title: "Экспорт/импорт",
+    icon: "briefcase-outline",
+    children: [
+      {
+        title: "Excel в XML",
+        link: '/pages/convert',
+      },
+    ],
+  },
+  {
     title: 'FEATURES',
     group: true,
   },

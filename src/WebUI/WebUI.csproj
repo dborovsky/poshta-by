@@ -44,7 +44,11 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Remove="ClientApp\src\app\%40core\backend\api\http.service.ts" />
+    <None Remove="ClientApp\src\app\%40core\backend\services\upload.service.ts" />
     <None Remove="ClientApp\src\app\app.server.module.ts" />
+    <None Remove="ClientApp\src\app\pages\convert\convert.component.ts" />
+    <None Remove="ClientApp\src\app\pages\convert\convert.module.ts" />
     <None Remove="ClientApp\src\tsconfig.server.json" />
   </ItemGroup>
 

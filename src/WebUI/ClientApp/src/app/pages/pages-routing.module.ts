@@ -5,11 +5,16 @@ import { PagesComponent } from './pages.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ECommerceComponent } from './e-commerce/e-commerce.component';
 import { NotFoundComponent } from './miscellaneous/not-found/not-found.component';
+import { ConvertComponent } from './convert/convert.component';
 
 const routes: Routes = [{
   path: '',
   component: PagesComponent,
   children: [
+    {
+      path: 'convert',
+      component: ConvertComponent,
+    },
     {
       path: 'dashboard',
       component: ECommerceComponent,
