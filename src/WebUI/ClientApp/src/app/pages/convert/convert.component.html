@@ -1,0 +1,17 @@
+<h1>Импорт Excell</h1>
+<div class="row">
+  <div class="col-md-12">
+    <nb-card class="inline-form-card">
+      <nb-card-header>Импорт Excell</nb-card-header>
+      <nb-card-body>
+        <nb-progress-bar [value]="file.progress" [displayValue]="true" status="success">success</nb-progress-bar>          
+          <span id="file-label">
+
+          </span>  
+        
+          <input type="file" nbInput fullWidth #fileUpload id="fileUpload" name="fileUpload" accept=".txt" placeholder="Выберите файл"/>
+          <button nbButton (click)="onClick()" status="primary">Загрузить</button>
+      </nb-card-body>
+    </nb-card>
+  </div>
+</div>
